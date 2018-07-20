@@ -1,0 +1,4 @@
+{
+	"counterfeit": ["url_gs.txt", "url_fb.txt", "url_whoscall.txt"],
+	"legitimate": ["url_legitimate_momo.txt"]
+}
