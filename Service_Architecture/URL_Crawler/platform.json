@@ -1,0 +1,63 @@
+{
+	"yahoo":{
+		"url": "https://tw.mall.yahoo.com/merchant_homepage?searchby=sname",
+		"shop_name_selector": "#m_L2_Left_Store > ul li.Pt-10.Fw-b",
+		"sources":[
+			"https://tw.mall.yahoo.com/%E6%B5%81%E8%A1%8C%E5%A5%B3%E8%A3%9D-152981802-category.html?.r=1296778451",
+			"https://tw.mall.yahoo.com/%E4%B8%AD%E5%A4%A7%E5%B0%BA%E7%A2%BC%E5%A5%B3%E8%A3%9DM-7L-152981957-category.html?.r=412825008",
+			"https://tw.mall.yahoo.com/%E5%A5%B3%E6%80%A7%E5%85%A7%E7%9D%A1%E8%A1%A3-152982118-category.html?.r=543846120",
+			"https://tw.mall.yahoo.com/%E5%93%81%E7%89%8C-%E6%BD%AE%E6%B5%81%E7%94%B7%E8%A3%9D-152982021-category.html?.r=422914694",
+			"https://tw.mall.yahoo.com/%E5%B0%88%E6%AB%83%E7%BE%8E%E5%A6%9D-%E9%A6%99%E6%B0%B4-2144420544-category.html?.r=237016447",
+			"https://tw.mall.yahoo.com/%E9%96%8B%E6%9E%B6%E7%BE%8E%E5%A6%9D-%E8%97%A5%E5%A6%9D-152982145-category.html?.r=258924206",
+			"https://tw.mall.yahoo.com/%E7%BE%8E%E9%AB%94-%E7%A7%81%E5%AF%86-%E6%89%8B%E8%B6%B3%E4%BF%9D%E9%A4%8A-2144420546-category.html?.r=191385668",
+			"https://tw.mall.yahoo.com/%E9%A6%99%E6%B0%9B%E6%B2%90%E6%B5%B4-%E9%AB%AE%E5%93%81-%E5%81%87%E9%AB%AE-152982310-category.html?.r=132827109",
+			"https://tw.mall.yahoo.com/%E5%9C%8B%E9%9A%9B%E7%B2%BE%E5%93%81-979369543-category.html?.r=1861225525",
+			"https://tw.mall.yahoo.com/%E5%93%81%E7%89%8C%E9%9E%8B%E5%8C%85-2144907217-category.html?.r=629621069",
+			"https://tw.mall.yahoo.com/%E6%B5%81%E8%A1%8C%E5%A5%B3%E5%8C%85-%E7%9A%AE%E5%A4%BE-152982567-category.html?.r=1567473590",
+			"https://tw.mall.yahoo.com/%E6%B5%81%E8%A1%8C%E5%A5%B3%E9%9E%8B-152982534-category.html?.r=1046224412",
+			"https://tw.mall.yahoo.com/%E5%9E%8B%E7%94%B7%E9%9E%8B%E5%8C%85%E9%85%8D%E4%BB%B6-979408410-category.html?.r=44848731",
+			"https://tw.mall.yahoo.com/%E7%8F%A0%E5%AF%B6-%E9%A3%BE%E5%93%81-%E9%85%8D%E4%BB%B6-2144442407-category.html?.r=2003365338",
+			"https://tw.mall.yahoo.com/%E7%AB%A5%E8%A3%9D-%E5%AA%BD%E5%92%AA%E8%A3%9D-152982776-category.html?.r=267330283",
+			"https://tw.mall.yahoo.com/%E5%AF%B6%E8%B2%9D%E5%AA%BD%E5%92%AA%E7%94%A8%E5%93%81-2144907218-category.html?.r=1857222655",
+			"https://tw.mall.yahoo.com/Apple%E5%B0%88%E5%8D%80-152982957-category.html?.r=1031463859",
+			"https://tw.mall.yahoo.com/%E5%B9%B3%E6%9D%BF-NB-PC-152982921-category.html?.r=1312717824",
+			"https://tw.mall.yahoo.com/%E9%80%B1%E9%82%8A%E8%A8%AD%E5%82%99-%E9%9B%B6%E7%B5%84%E4%BB%B6-152982958-category.html?.r=1994916345",
+			"https://tw.mall.yahoo.com/%E5%BB%9A%E6%88%BF-%E6%96%99%E7%90%86-%E9%A3%B2%E6%B0%B4-152983352-category.html?.r=1786159795",
+			"https://tw.mall.yahoo.com/%E7%BE%8E%E5%AE%B9-%E5%81%A5%E5%BA%B7-%E6%8C%89%E6%91%A9-152983381-category.html?.r=1592560853",
+			"https://tw.mall.yahoo.com/%E5%AD%A3%E7%AF%80-%E7%94%9F%E6%B4%BB-%E6%B8%85%E6%BD%94-152983276-category.html?.r=1416695142",
+			"https://tw.mall.yahoo.com/%E9%9B%BB%E8%A6%96-%E5%BD%B1%E9%9F%B3-%E8%80%B3%E6%A9%9F-152983192-category.html?.r=317133685",
+			"https://tw.mall.yahoo.com/%E7%94%9F%E6%B4%BB%E7%99%BE%E8%B2%A8-%E6%97%A5%E7%94%A8%E5%93%81-2144893523-category.html?.r=1940855284",
+			"https://tw.mall.yahoo.com/%E5%B1%85%E5%AE%B6-%E9%9B%9C%E8%B2%A8-%E5%9C%92%E8%97%9D-152983923-category.html?.r=914687767",
+			"https://tw.mall.yahoo.com/%E5%AF%A2%E5%85%B7-%E5%AE%B6%E9%A3%BE-794002330-category.html?.r=29920096",
+			"https://tw.mall.yahoo.com/%E5%82%A2%E4%BF%B1-%E6%94%B6%E7%B4%8D-%E5%BA%8A%E5%A2%8A-979259341-category.html?.r=673077638",
+			"https://tw.mall.yahoo.com/%E5%BB%9A%E6%88%BF%E9%8D%8B%E5%85%B7-%E9%A4%90%E5%85%B7-%E7%94%A8%E5%93%81-979277178-category.html?.r=1773554408",
+			"https://tw.mall.yahoo.com/%E8%A1%9B%E6%B5%B4%E8%A8%AD%E5%82%99-%E6%B5%B4%E5%AE%A4%E7%94%A8%E5%93%81-979277179-category.html?.r=1793974235",
+			"https://tw.mall.yahoo.com/%E7%9B%B8%E6%A9%9F-%E5%96%AE%E7%9C%BC-%E6%94%9D%E5%BD%B1%E6%A9%9F-979269763-category.html?.r=263606923",
+			"https://tw.mall.yahoo.com/%E6%94%9D%E5%BD%B1%E9%85%8D%E4%BB%B6-%E9%98%B2%E6%BD%AE%E7%AE%B1-979319352-category.html?.r=839774075",
+			"https://tw.mall.yahoo.com/%E6%89%8B%E6%A9%9F-%E7%A9%BF%E6%88%B4-%E6%99%BA%E6%85%A7%E6%89%8B%E9%8C%B6-152983538-category.html?.r=1354472645",
+			"https://tw.mall.yahoo.com/%E6%89%8B%E6%A9%9F%E9%85%8D%E4%BB%B6-%E9%80%B1%E9%82%8A-152983537-category.html?.r=32600173",
+			"https://tw.mall.yahoo.com/%E9%9B%BB%E7%8E%A9-%E7%8E%A9%E5%85%B7-152983671-category.html?.r=1114225410",
+			"https://tw.mall.yahoo.com/%E8%85%B3%E8%B8%8F%E8%BB%8A-%E6%B1%BD%E6%A9%9F%E8%BB%8A%E7%B2%BE%E5%93%81-152984185-category.html?.r=959575678",
+			"https://tw.mall.yahoo.com/%E9%81%8B%E5%8B%95%E5%99%A8%E6%9D%90-%E7%94%A8%E5%93%81-152984346-category.html?.r=1731867683",
+			"https://tw.mall.yahoo.com/%E9%81%8B%E5%8B%95%E9%9E%8B-%E6%9C%8D%E9%A3%BE-%E5%8C%85%E5%8C%85-979402942-category.html?.r=340414771",
+			"https://tw.mall.yahoo.com/%E6%88%B6%E5%A4%96%E7%94%A8%E5%93%81-%E8%A1%8C%E6%9D%8E%E7%AE%B1-979269762-category.html?.r=807008375",
+			"https://tw.mall.yahoo.com/%E6%A8%82%E5%99%A8-152984537-category.html?.r=1370543830",
+			"https://tw.mall.yahoo.com/%E6%9B%B8%E7%B1%8D-%E9%9B%9C%E8%AA%8C%E6%9C%9F%E5%88%8A-152984564-category.html?.r=339826792",
+			"https://tw.mall.yahoo.com/%E9%9F%B3%E6%A8%82-%E9%9B%BB%E5%BD%B1-%E5%BD%B1%E9%9B%86-152984611-category.html?.r=1135541205",
+			"https://tw.mall.yahoo.com/%E6%96%87%E5%85%B7-%E8%BE%A6%E5%85%AC%E7%94%A8%E5%93%81-152984563-category.html?.r=372426966"
+		]
+	},
+	"momo":{
+		"url": "https://www.momoshop.com.tw/brand/Main.jsp?FTOOTH=21&Area=tooth&cid=T21&oid=L21999&mdiv=1000100000-bt_0_157_01&ctype=B&mdiv=1000100000-bt_0_157_01-&ctype=B",
+		"shop_name_selector": "#bt_5_023_10 > div.letterList_0_layout > ul > li > a > span",
+		"sources":[
+			"https://www.momoshop.com.tw/brand/Main.jsp?FTOOTH=21&Area=tooth&cid=T21&oid=L21999&mdiv=1000100000-bt_0_157_01&ctype=B&mdiv=1000100000-bt_0_157_01-&ctype=B"
+		]
+	},
+	"shopee":{
+		"url": "https://shopee.tw/mall/"
+	},
+	"pchome":{
+		"url": ""
+	}
+}
