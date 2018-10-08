@@ -1,6 +1,6 @@
 /*
 
-My Custom JS
+My Customized JS
 ============
 
 Author:  Danny
