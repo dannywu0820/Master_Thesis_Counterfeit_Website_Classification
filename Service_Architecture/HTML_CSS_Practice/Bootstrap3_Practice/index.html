@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    -->
+    
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap Cheat Sheet</title>
 
@@ -28,12 +28,21 @@
     <!-- Use a Package Manager: Bower, NPM or Composer -->
   </head>
   <body>
-    <div class="container" id="main">
+    <div class="container" id="main"><!-- container vs. container-fluid -->
 
-      <div class="navbar navbar-fixed-top" id="fixed_navbar">
-
-
-      </div><!-- end fixed_navbar -->
+      <nav class="navbar navbar-default navbar-fixed-top" id="fixed_navbar">
+        <div class="container-fluid">
+          <!-- brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="" href="#more_courses"><img src="images/logo.png" alt="Alternative Text"></a>
+          </div><!-- end navbar-header -->
+          
+          <!-- collect the nav links, forms and other content for toggling -->
+          <div class="collapse navbar-collapse" id="mobile_collapse">
+            
+          </div><!-- end navbar-collapse -->
+        </div><!-- end container-fluid -->
+      </nav><!-- end fixed_navbar -->
 
       <div class="carousel slide" id="slide_carousel">
 
