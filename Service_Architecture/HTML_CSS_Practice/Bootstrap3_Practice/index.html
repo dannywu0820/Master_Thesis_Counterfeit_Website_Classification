@@ -103,8 +103,52 @@
       </nav><!-- end fixed_navbar -->
 
       <div class="carousel slide" id="slide_carousel">
+        <!-- indicators: 3 dots at the bottom -->
+        <ol class="carousel-indicators">
+          <li data-target="#slide_carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#slide_carousel" data-slide-to="1"></li>
+          <li data-target="#slide_carousel" data-slide-to="2"></li>
+        </ol>
 
+        <!-- wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <!-- 1st item -->
+          <div class="item active" id="slide1">
+            <img src="images/1200-x-500-1.jpg" alt="">
+            <div class="carousel-caption">
+              <h2>Head 1</h2>
+              <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            </div>
+          </div><!-- end slide1 -->
 
+          <!-- 2nd item -->
+          <div class="item" id="slide2">
+            <img src="images/1200-x-500-2.jpg" alt="">
+            <div class="carousel-caption">
+              <h2>Head 2</h2>
+              <p>Description 2</p>
+            </div>
+          </div><!-- end slide2 -->
+
+          <!-- 3rd item -->
+          <div class="item" id="slide3">
+            <img src="images/1200-x-500-3.jpg" alt="">
+            <div class="carousel-caption">
+              <h2>Head 3</h2>
+              <p>Description 3</p>
+            </div>
+          </div><!-- end slide3 -->
+        </div><!-- end carousel-inner -->
+
+        <!-- controls: left-right arrows -->
+        <a class="left carousel-control" href="#slide_carousel" role="button" data-slide="prev">
+          <span class="icon-prev" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#slide_carousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div><!-- end slide_carousel -->
 
       <div class="row" id="callout">
