@@ -158,6 +158,45 @@
               <a href="" class="btn btn-info btn-lg">Click to Show Alert</a>
               <a href="" class="btn btn-link">or a secondary link</a>
             </div><!-- end page-header -->
+
+            <!-- practice button groups -->
+            <div class="btn-toolbar" role="toolbar" aria-label="...">
+              <!-- 1st button group -->            
+              <div class="btn-group btn-group-sm" role="group">
+                <button type="button" class="btn btn-default">1</button>
+                <button type="button" class="btn btn-default">2</button>
+                <button type="button" class="btn btn-default">3</button>
+              </div><!-- end btn-group-sm -->
+
+              <!-- 2nd button group -->            
+              <div class="btn-group btn-group-md" role="group" aria-label="...">
+                <!-- single button dropdown -->
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Actions <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action1</a></li>
+                  <li><a href="#">Action2</a></li>
+                </ul>
+
+                <!-- split button dropdown -->
+                <button type="button" class="btn btn-default">Actions</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action1</a></li>
+                  <li><a href="#">Action2</a></li>
+                </ul>
+              </div><!-- end btn-group-md -->
+
+              <!-- 3rd button group -->            
+              <div class="btn-group-vertical" role="group" aria-label="...">
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-warning" disabled="disabled">Warning</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+              </div><!-- end btn-group-verticall -->
+            </div><!-- end btn-toolbar -->
           </div><!-- end well -->
         </div><!-- end col-12 -->
       <div class="row" id="callout">
