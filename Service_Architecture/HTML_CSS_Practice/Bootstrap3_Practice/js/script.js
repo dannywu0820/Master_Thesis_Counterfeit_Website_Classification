@@ -14,4 +14,12 @@ $(function(){
 		e.preventDefault();
 		$('#callout_alert').slideDown();
 	});
+
+	$('a.pop').click(function(e){
+		e.preventDefault(); //avoid refreshing the page(href="") or skipping to top(href="#")
+	});
+
+	$('a.pop').popover();
+
+	$('[data-toggle="tooltip"]').tooltip();
 });
