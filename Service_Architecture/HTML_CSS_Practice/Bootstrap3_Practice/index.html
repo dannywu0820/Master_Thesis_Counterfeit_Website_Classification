@@ -340,7 +340,38 @@
                       <hr>
                       <p><small class="text-muted">PS. This form doesn't do anything.</small></p>
 
-                      <form>
+                      <form class="form-horizontal">
+                        <!-- name -->
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label" for="input_name">Name</label>
+                          <div class="col-sm-10">
+                            <input type="text" class="form-control" id="input_name" placeholder="Your Name">
+                          </div>
+                        </div><!-- end-form-group -->
+
+                        <!-- email -->
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label" for="input_email">Email</label>
+                          <div class="col-sm-10">
+                            <input type="email" class="form-control" id="input_email" placeholder="Your Email">
+                          </div>
+                        </div><!-- end-form-group -->
+
+                        <!-- textarea -->
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label" for="input_message">Message</label>
+                          <div class="col-sm-10">
+                            <textarea rows="3" class="form-control" id="input_message" placeholder="Message"></textarea>
+                          </div>
+
+                        </div><!-- end-form-group -->
+
+                        <!-- submit button -->
+                        <div class="form-group">
+                          <div class="col-sm-12">
+                            <button type="submit" class="btn btn-success pull-right">Send!</button>
+                          </div>
+                        </div>
                       </form>
                     </div><!-- end modal-body -->
 
