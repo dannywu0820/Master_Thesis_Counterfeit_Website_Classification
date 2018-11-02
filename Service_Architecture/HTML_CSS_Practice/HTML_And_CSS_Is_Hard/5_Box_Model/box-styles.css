@@ -1,0 +1,96 @@
+/* resetting styles:
+   different browsers have different default styles, making it difficult to create consistent stylesheets
+   it's usually a good idea to override default styles by using the universal selector(*)
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* block-box elements & inline-box elements */
+h1, p {
+	background-color: #DDE0E3; /* light gray */
+}
+
+em, strong {
+	background-color: #B2D6FF; /* light blue */
+	/*display: block;*/ /* override the default box type, useful for <a> and <img> elements */
+}
+
+/* padding */
+h1 {
+	padding: 50px;
+}
+
+p {
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+
+	padding: 20px 10px; /* shorthand format 1: vertical horizontal */
+	padding: 20px 0 20px 10px; /* shorthand format 2: top right bottom left */
+}
+
+/* border */
+h1 {
+	border: 1px solid #5D6063;
+}
+
+/* margin:
+   1. paddings of a box have a background, while margins are alwasy transparent
+   2. paddings are included in the click area of an element, while margins aren't
+   3. margins collapse vertically, while paddings don't
+   4. to prevent margin collapse, either put an <div> element with non-zero height or use bottom-only/top-only convention
+*/
+p {
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+
+strong {
+	margin: 50px; /* inline-box elements ignore top and bottom margins */
+	padding: 50px; /* inline-box elements' paddings don't affect vertical layout of surrounding boxes */
+}
+
+/* generic boxes:
+   <div> and <span> are "container" elements that provide a hook for adding CSS styles to arbitrary sections
+*/
+#myButton {
+  color: #FFF;
+  background-color: #5995DA;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+}
+
+/* explicit dimensions:
+   by default, add more text to HTML elements will expand their dimensions automatically
+   use width & height to define explicit dimensions of a box's content
+*/
+#myButton {
+ 	width: 200px;
+  	height: 20px;
+  	white-space: normal;
+  	overflow: auto;
+ }
+
+/* content boxes & border boxes
+   content-box: width & height only define the size of a box's content, padding and border are added on top of these explicit dimensions
+   border-box: actual dimensions include padding and border, content is determined automatically
+*/
+#myButton {
+	box-sizing: border-box;
+}
+
+ /* aligning boxes */
+ body {
+ 	text-align: center; /* align inline-box elements and content inside block-box elements */
+ }
+
+ #myButton {
+ 	margin: 20px auto; /* align block-box elements to center */
+ }
