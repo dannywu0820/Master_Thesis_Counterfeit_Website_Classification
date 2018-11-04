@@ -1,0 +1,157 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* default HTML layout behavior:
+   we're essentially limited to a single-column layout
+   all the blocks still rendered vertically one after another even when sidebar gets narrower
+*/
+.menu {
+	height: 100px;
+	background-color: #B2D6FF; /* medium blue */
+}
+
+.sidebar {
+	width: 200px;
+	height: 300px;
+	background-color: #F09A9D; /* red */
+}
+
+.content {
+	height: 500px;
+	background-color: #F5CF8E; /* yellow */
+}
+
+.footer {
+	height: 200px;
+	background-color: #D6E9FE; /* light blue */
+}
+
+/* floating an element:
+   this gives us a magazine-style layout
+*/
+.sidebar {
+	float: left; /* left align block-box elements */
+	/*float: none;*/ /* cancel float */
+	/*margin: 0 auto;*/ /* center align */
+}
+
+/* floating inside of parents:
+   floated boxes always align to the left/right of their parent element
+*/
+.page {
+	width: 900px;
+	margin: 0 auto;
+}
+
+/* floating multiple elements:
+   this gives us true control over the horizontal alignment of block boxes
+   we can create 4 distinct layouts of .sidebar and .content
+*/
+.content {
+	width: 650px;
+	float: left;
+}
+
+/* after a float:
+   the height of floated boxes don't contribute to the noraml flow of the page
+   we can see this more clearly by adding a red border around .page element
+   there are 2 ways to fix this
+   1. clearing floats: tell a block to ignore any floats that appear before it
+   2. hiding overflow: tell a container div to recognize the height of any floated elements it contains
+*/
+.page {
+	border: 1px solid red;
+}
+
+/* clearing floats:
+   floated elements don't contribute to the height of their container div
+   use when you have an extra unfloated HTML element at the bottom of a container div
+*/
+.footer {
+	clear: both;
+	/*clear: left/right;*/
+}
+
+/* hiding overflow:
+   floated elements contribute to the height of their container div
+*/
+.page {
+	overflow: hidden; /* without this, we can't see the light gray background */
+	background-color: #EAEDF0; /* light gray */
+}
+
+/* full-bleed layout:
+   .page is now only used for center align
+   .container is used for full-bleed background
+*/
+.container {
+	overflow: hidden;
+	background-color: #EAEDF0;
+}
+
+/* floats for equal-width columns:
+   resize the browser window, and you’ll see our columns grow and shrink accordingly(responsive design)
+*/
+.footer-item {
+	float: left;
+	width: 31%;
+	height: 160px;
+	margin: 20px 1.15%;
+	background-color: #B2D6FF; /* medium blue */
+}
+
+/* floats for grids:
+   e.g., creating a photo gallery with a bunch of thumbnails by putting grid items
+   in .page and adding <img> elements to grid items
+   however, flexbox is a more modern way to create these kinds of layouts
+*/
+.footer {
+	height: 100%;
+	overflow: hidden;
+	background-color: #D6E9FE;
+}
+
+/* floats for content:
+   there are 2 aspects to define a web page layout
+   1. overall page structure
+   2. actual content that go inside the page structure
+   laying out a website is a recursive process: 
+   you build a high-level structure to work in, then you fill it with your actual content
+*/
+.content {
+	padding: 20px;
+}
+
+.article-image {
+	float: right;
+	width: 150px;
+	height: 150px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+/* hiding overflow for content */
+.avatar {
+	float: left;
+	width: 60px;
+	height: 60px;
+	margin: 25px;
+	border-radius: 40px;
+	background-color: #D6E9FE;
+}
+
+.username {
+	margin-top: 25px;
+}
+
+.comment {
+	margin: 10px;
+	overflow: hidden; /* important trick: make sure that the text horizontally cleared */
+}
