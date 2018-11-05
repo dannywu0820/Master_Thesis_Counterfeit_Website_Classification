@@ -1,0 +1,188 @@
+/* flexbox overview:
+   flexbox uses 2 types of boxes
+   1.flex containers: to group a bunch of flex items together and define how they're positioned
+   2.flex items: every HTML element that is a direct child of a flex container
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-container {
+  color: #fff;
+  background-color: #5995DA; /* blue */
+  padding: 20px 0;
+}
+
+.menu {
+  border: 1px solid #fff; /* for debugging */
+  width: 900px;
+}
+
+/* flex containers */
+.menu-container {
+	display: flex;
+}
+
+/* aligning a flex item:
+   notice that we add justify-content to the flex container
+*/
+.menu-container {
+	justify-content: center; /* other values: flex-start, flex-end, space-around, space-between */
+}
+
+/* distributing multiple flex items:
+   flex containers only know how to position elements that are one level deep (i.e., their child elements)
+   they don’t care one bit about what’s inside their flex items
+   this means that grouping flex items is another weapon in your layout-creation arsenal
+*/
+.menu {
+	border: 1px solid #fff;
+	width: 900px;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* grouping flex items */
+.date {
+	margin-left: 10px;
+}
+
+.links {
+	/*border: 1px solid #fff;*/
+	display: flex;
+	justify-content: flex-end;
+	margin: 0px 10px;
+}
+
+.login {
+	margin-left: 20px;
+}
+
+/* cross-axis(vertical) alignment */
+.header-container {
+	color: #5995DA;
+	background-color: #D6E9FE;
+	display: flex;
+	justify-content: center;
+}
+
+.header {
+	width: 900px;
+	height: 300px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center; /* other values: flex-start, flex-end, baseline, stretch*/
+}
+
+/* stretch: used for creating equal-height columns with a variable amount of content in each one */
+/*
+.social,
+.logo,
+.subscribe {
+  border: 1px solid #5995DA;
+  background-color: gray;
+}
+*/
+
+/* wrapping flex items:
+   flexbox is a more powerful alternative to float-based grids
+   not only can it render items as a grid, it can change their alignment, direction, order and size
+*/
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; /* comment this, extra images will flow off the page */
+}
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+
+/* flex container direction:
+   a key tenant of responsive design is presenting the same HTML content to both mobile and desktop users
+   most mobile layouts are a single column while most desktop layouts stack elements horizontally
+*/
+.photo-grid {
+	flex-direction: column; /* other values: row, row-reverse, column-reverse */
+	justify-content: center; /* it now controls vertical alignment since container direction is rotated */
+	align-items: center; /* it now controls horizontal alignment since container direction is rotated */
+}
+
+/* flex container order:
+   previously, the only way we could make a box appear before or after
+   another one is to move around the underlying HTML markup
+*/
+.photo-grid {
+	flex-direction: row-reverse; /* swaps the order on a per-row basis */
+}
+
+/* flex item order */
+.photo-grid {
+	flex-direction: row;
+}
+
+.first-item {
+	order: 1; /* lower order means higher priority, default value is 0 */
+}
+
+.last-item {
+	order: -1;
+}
+
+.photo-grid :nth-child(2) {
+    order: 2;
+}
+
+.photo-grid :nth-child(4) {
+    order: 2;
+}
+
+/* flex item alignment */
+.social,
+.subscribe {
+	align-self: flex-end; /* align individual flex items by the same values as align-item */
+	margin-bottom: 20px;
+}
+
+/* flexible items:
+   flex items are flexible, they can shrink and stretch to match the width of their containers
+*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1; /* tell the items to stretch to match the width of .footer */
+}
+
+.footer-three {
+	flex: 2;
+}
+
+/* static item widths:
+   we can even mix-and-match flexible boxes with fixed-width ones
+   e.g., many websites have a fixed-width sidebar (or multiple sidebars)
+   and a flexible content block containing the main text of the page
+*/
+.footer-one,
+.footer-three {
+	background-color: #5995DA;
+	flex: initial; /* fixed-width, only the middle box gets resized when resizing the browser window */
+	width: 300px;
+
+}
