@@ -1,0 +1,88 @@
+/* positioned elements:
+   instead of "static" flow in CSS box model, floats and flexbox layout schemes
+   there are otehr 3 types of positioning, each let you manually position elements using specific coordinates
+   1.relative
+   2.absolute
+   3.fixed
+   the CSS property 'position' lets you alter positioning scheme
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 1200px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.example {
+  display: flex;
+  justify-content: space-around;
+  
+  width: 800px;
+  margin: 50px 0;
+  background-color: #D6E9FE;
+}
+
+.item img {
+  display: block;
+}
+
+/* relative positioning:
+   it moves elements around relative to where they appear in the static flow
+   it works similarly to margins but the position of surrounding elements and parent element aren't affected
+*/
+.item-relative {
+  position: relative;
+  top: -30px; /* how far it's offset from its static position */
+  left: 50px;
+  /*
+  bottom: 30px;
+  right: -50px;
+  */
+}
+
+/* absolute positioning:
+   it's just like relative positioning, but the offset is relative to the entire browser window
+   it removes an element from the normal flow of the page
+*/
+.item-absolute {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.example {
+  justify-content: flex-start; /* no space btw static elements in 2nd row while there's space in 1st row */
+}
+
+/* relatively absolute positioning:
+   absolute positioning becomes much more practical when it’s relative
+   to some other element that is in the static flow of the page
+   coordinates for absolute elements are always relative to the closest container that is a positioned element
+   it only falls back to being relative to the browser when none of its ancestors are positioned
+*/
+.example {
+  justify-content: space-around;
+}
+
+.absolute {
+  position: relative; /* only for .item-absolute to hook back into its parent container */
+}
+
+/* fixed positioning:
+   the key difference from absolute positioning is that fixed elements don’t scroll with the rest of the page
+   e.g., navigation bars, pop-up banners
+*/
+.item-fixed {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
