@@ -1,0 +1,122 @@
+/* CSS media queries
+   responsive design refers to the idea that your webside should
+   display equally well from desktop monitors to mobile phones
+   it's accomplished through CSS media queries, which is a way to
+   conditionally apply or ignore certain rules based on users' device
+   this is the reason why we seperate content(HTML) from presentation(CSS)
+   since we can use the same HTML for different devices(phone/tablet/desktop)
+*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* mobile-first development:
+   start with the mobile layout and work your way up to the desktop version
+   since desktop layouts are typically more complex than their mobile counterparts
+   it's an approach maximizes the amount of CSS that you can reuse across your layouts
+*/
+/* base styles */
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color: #5995DA;
+  height: 80px;
+}
+
+.header {
+  background-color: #B2D6FF;
+}
+
+.content {
+  background-color: #EAEDF0;
+  height: 600px;
+}
+
+.sign-up {
+  background-color: #D6E9FE;
+}
+
+.feature-1 {
+  background-color: #F5CF8E;
+}
+
+.feature-2 {
+  background-color: #F09A9D;
+}
+
+.feature-3 {
+  background-color: #C8C6FA;
+}
+
+/* a few notes on design:
+   mobile/tablet are "fluid" layouts: stretch and shrink to fill the width of the screen
+                                      which let us target a range of screen widths
+   desktop is "fixed-width" layout: it has the same width regardless of the screen dimensions
+*/
+
+/* mobile styles */
+/* only screen "media type": contained styles should only be applied to devices with screens */
+/* min-width & max-width "media features": specify the device dimensions(breakpoints) you’re targeting */
+@media only screen and (max-width: 400px) {
+	/*body {
+		background-color: #F09A9D;
+	}*/
+}
+
+/* tablet styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+	/*body {
+		background-color: #F5CF8E;
+	}*/
+
+	.sign-up,
+	.feature-1,
+	.feature-2,
+	.feature-3 {
+		width: 50%;
+	}
+}
+
+/* desktop styles */
+@media only screen and (min-width: 961px) {
+	/*body {
+		background-color: #B2D6FF;
+	}*/
+
+	.page {
+		width: 960px;
+		margin: 0 auto;
+	}
+
+	.feature-1,
+	.feature-2,
+	.feature-3 {
+		width: 33.3%;
+	}
+
+	.header {
+		height: 400px;
+	}
+
+	.sign-up {
+		height: 200px;
+		order: 1; /* let it appear underneath .feature-* sections */
+	}
+
+	.content {
+		order: 2; /* let it appear underneath .sign-up sections */
+	}
+}
