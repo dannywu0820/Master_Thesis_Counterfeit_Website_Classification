@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <!-- disable viewport zooming -->
+    <!-- since the default behavior will prevent mobile devices from using mobile layout -->
+    <!-- this is a critical element that should be on every web page you create -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+    <title>Responsive Design</title>
+    <link rel='stylesheet' href='responsive-styles.css'/>
+  </head>
+  <body>
+    <!-- There's nothing here! -->
+    <div class='page'>
+	  <div class='section menu'></div>
+
+	  <!-- [responsive image optimization] -->
+	  <!-- 3 scenarios -->
+	  <!-- 1.a standard-resolution screen that doesn’t need a retina-quality image -->
+	  <!-- 2.a retina mobile device that can use a standard-quality image because it’s been scaled down so much -->
+	  <!-- 3.a desktop layout that uses a wide image, and an associated mobile layout that uses a taller image -->
+	  
+	  <div class='section header'>
+	    <!-- <img src='images/header.svg'/> -->
+	    
+	    <!-- [2.screen width optimization using srcset ] -->
+	    <!-- 1st scenario optimizes larger images based on just the device’s screen resolution-->
+	    <!-- 2nd scenario optimizes larger images based on their final rendered dimensions -->
+	    <!-- when to use? for images larger than 600px -->
+	    <!-- <div class='photo'>
+	      <img src='images/photo-small.jpg'
+	      srcset='images/photo-big.jpg 2000w, images/photo-small.jpg 1000w'
+	      sizes='(min-width: 960px) 960px, 100vw'/>
+	    </div> -->
+	    <!-- when the screen is at least 960px, the image will also be 960px -->
+	    <!-- otherwise, the image's width will be 100% of the "viewport width" -->
+	    <!-- hence, standard & mobile retina(<500px) screens use photo-small.jpg, while retina(>500px) ones use photo-big.jpg -->
+
+	    <!-- [3.art direction using picture] -->
+	    <!-- the tradeoff is that we lost optimization on data usage(2nd scenario) -->
+	    <!-- as long as screen > 400px, the browser always uses the high-res image -->
+	    <!-- when to use? make fancier optimization for designers -->
+	    <div class='photo'>
+	      <picture>
+	        <source media='(min-width: 401px)' srcset='images/photo-big.jpg'/>
+	        <source media='(max-width: 400px)' srcset='images/photo-tall.jpg'/>
+	        <img src='images/photo-small.jpg'/>
+	      </picture>
+	    </div>
+	  </div><!-- end header -->
+
+	  <div class='section content'>
+	    <!-- <img src='images/content.svg'/> -->
+	    
+	    <!-- [responsive svg images] -->
+	    <!-- vector-based svg images can avoid screen resolution problems -->
+	    <!-- since desktop version is too big, we fix this with max-width -->
+	    <!-- an image’s physical dimensions are more content than presentation -->
+	    <!-- so it makes sense for this to appear in the HTML rather than the stylesheet -->
+	    <!-- <img class='illustration' src='images/illustration.svg' style='max-width: 500px'> -->
+
+	    <!-- [responsive raster(jpg,png,gif) images ] -->
+	    <!-- a high-resolution image is a lazy way for non-retina devices -->
+	    <!-- <div class='illustration'>
+	    	<img src='images/illustration-big.png' style='max-width: 500px'/>
+	    </div> -->
+	    
+	    <!-- [1.retina optimization using srcset] -->
+	    <!-- when to use? for images less than 600px -->
+	    <div class='illustration'>
+	    	<img src='images/illustration-small.png'
+	    	srcset='images/illustration-small.png 1x, images/illustration-big.png 2x'
+	    	style='max-width: 500px'/>
+	    </div>
+	    <!-- present small(yellow) images to standard(1x) screens and big(blue) to retina(2x) -->
+	  </div><!-- end content -->
+
+	  <div class='section sign-up'>
+	    <img src='images/sign-up.svg'/>
+	  </div>
+
+	  <div class='section feature-1'>
+	    <img src='images/feature.svg'/>
+	  </div>
+
+	  <div class='section feature-2'>
+	    <img src='images/feature.svg'/>
+	  </div>
+
+	  <div class='section feature-3'>
+	    <img src='images/feature.svg'/>
+	  </div>
+	</div><!-- end page -->
+  </body>
+</html>
